@@ -1,4 +1,4 @@
-## InstaPy Wiki
+## InstaPy Documentation
 
 #### Please read through the short guides for:
 - **[User](./USERS.md)** - If you want to create an issue or feature request
