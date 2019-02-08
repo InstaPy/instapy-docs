@@ -16,7 +16,7 @@ If you know python or could help with any of the other technical issues found on
 1. Let us know that you are working on the issue and we will assign it to you
 1. Fork the repository and start working on the issue
 1. Test your solution and make sure that it works as expected
-1. Create a Pull request, reference the issue number and explain what you have changed/deleted/added to the project in depth and then someone will review your work and may suggest changes or ask questions
+1. Create a Pull request (to the `dev` branch), reference the issue number and explain what you have changed/deleted/added to the project in depth and then someone will review your work and may suggest changes or ask questions
 1. If anything needs to be changed make the changes as it will not be merged until it is fixed
 1. When it is merged sit back and admire your handiwork  
 
