@@ -58,7 +58,7 @@ NOTE: _If you add an empty file named ssh to the boot directory, ssh will be ena
 7. ```cd InstaPy```
 8. ```python3 -m pip install --user .```
 
-NOTE: _the last step (7.) takes quite a while!_
+NOTE: _the last step (8.) takes quite a while!_
 
 
 ## For Chrome
