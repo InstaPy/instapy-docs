@@ -1,4 +1,4 @@
-# Tutorial for Raspberry Pi3b: Install InstaPy with Python 3.7 and venv
+# Tutorial for Raspberry Pi3b: Install InstaPy with Python 3.x
 
 ## Basic Raspbian Configuration
 NOTE: _If you add an empty file named ssh to the boot directory, ssh will be enabled when you first start your RPi (more info on the official website - section 3 - [here](https://www.raspberrypi.org/documentation/remote-access/ssh/)). If you do this, you can connect your RPi via ethernet, ssh in (once you have your ip) and skip right to the update step below (step 7). If you do not want to do this, follow the initial setup instructions to connect peripherals below._
@@ -11,54 +11,22 @@ NOTE: _If you add an empty file named ssh to the boot directory, ssh will be ena
 6. open terminal --> ```sudo raspi-config``` -->interfacing options --> SSH -->enable (allows ssh connection from MacBook); then navigate to VNC --> enable (allows GUI access)
 7. ```sudo apt-get update && sudo apt-get upgrade```
 
-
-## Python 3.7 install guide
-**STEP 1:** _First install the dependencies needed to build._
-
-1. ```sudo apt-get update```
-2. ```sudo apt-get install -y build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev```
-
-**STEP 2:** _Compile (takes a while!)_
-
-3. ```wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tar.xz```
-4. ```tar xf Python-3.7.0.tar.xz```
-5. ```cd Python-3.7.0```
-6. ```./configure --prefix=/usr/local/opt/python-3.7.0```
-7. ```make -j 4```
-
-**STEP 3:** _Install_
-
-8. ```sudo make altinstall```
-
-**STEP 4:** _Make Python 3.7 the default version, make aliases_
-
-9. ```sudo ln -s /usr/local/opt/python-3.7.0/bin/pydoc3.7 /usr/bin/pydoc3.7```
-10. ```sudo ln -s /usr/local/opt/python-3.7.0/bin/python3.7 /usr/bin/python3.7```
-11. ```sudo ln -s /usr/local/opt/python-3.7.0/bin/python3.7m /usr/bin/python3.7m```
-12. ```sudo ln -s /usr/local/opt/python-3.7.0/bin/pyvenv-3.7 /usr/bin/pyvenv-3.7```
-13. ```sudo ln -s /usr/local/opt/python-3.7.0/bin/pip3.7 /usr/bin/pip3.7```
-14. ```alias python3='/usr/bin/python3.7'```
-15. ```echo "alias python3='/usr/bin/python3.7'" >>  ~/.bashrc```
-
-**STEP 5:** _Remove install files_
-
-15. ```cd ..```
-16. ```sudo rm -r Python-3.7.0```
-17. ```rm Python-3.7.0.tar.xz```
-
-
 ## Install InstaPy
 
 1. ```sudo apt-get update && sudo apt-get upgrade```
-2. ```mkdir Projects```
-3. ```cd Projects```
-4. ```python3 -m venv /home/pi/Projects/venv37```
-5. ```source venv37/bin/activate```
-6. ```git clone https://github.com/timgrossmann/InstaPy.git```
-7. ```cd InstaPy```
-8. ```python3 -m pip install --user .```
-
-NOTE: _the last step (8.) takes quite a while!_
+1. ```sudo apt-get install --user chromium```
+1. ```python3 -m pip install --user instapy```
+1. ```mkdir InstaPy```
+1. ```cd InstaPy```
+1. ```mkdir assets```
+1. ```cd assets```
+1. ```wget https://github.com/electron/electron/releases/download/v3.0.0-beta.5/chromedriver-v3.0.0-beta.5-linux-armv7l.zip```
+1. ```unzip chromedriver-v3.0.0-beta.5-linux-armv7l.zip```
+1. ```chmod 755 chromedriver```
+1. ```chmod +x chromedriver```
+1. ```rm chromedriver-v3.0.0-beta.5-linux-armv7l.zip```
+1. edit quickstart file with your credentials
+1. ```python3 quickstart.py```
 
 
 ## For Chrome
