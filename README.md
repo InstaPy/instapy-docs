@@ -8,6 +8,7 @@
 
 #### Installation help:
 - **[Build tools](./BUILD_TOOLS.md)** - If you're getting a build tools error upon installation
+- **[FAQ](./FAQ.md)** - For most encountered issues during installation.
 
 ---
 
