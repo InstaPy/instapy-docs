@@ -13,32 +13,15 @@ NOTE: _If you add an empty file named ssh to the boot directory, ssh will be ena
 
 ## Install InstaPy
 
-1. ```sudo apt-get update && sudo apt-get upgrade```
-1. ```sudo apt-get install --user chromium```
+1. ```sudo apt-get install chromium-browser```
 1. ```python3 -m pip install --user instapy```
+1. ```python3 -m pip uninstall instapy-chromedriver```
+1. ```python3 -m pip install instapy-chromedriver==2.36.post0```
 1. ```mkdir InstaPy```
 1. ```cd InstaPy```
-1. ```mkdir assets```
-1. ```cd assets```
-1. ```wget https://github.com/electron/electron/releases/download/v3.0.0-beta.5/chromedriver-v3.0.0-beta.5-linux-armv7l.zip```
-1. ```unzip chromedriver-v3.0.0-beta.5-linux-armv7l.zip```
-1. ```chmod 755 chromedriver```
-1. ```chmod +x chromedriver```
-1. ```rm chromedriver-v3.0.0-beta.5-linux-armv7l.zip```
-1. edit quickstart file with your credentials
+1. ```nano quickstart.py```
+1. Edit quickstart file with your credentials/ add functions you want to use, documentation in the [Readme](https://github.com/timgrossmann/InstaPy/blob/master/README.md)
 1. ```python3 quickstart.py```
-
-
-## For Chrome
-
-_Navigate to the assets folder:_
-
-9. ```wget https://github.com/electron/electron/releases/download/v3.0.0-beta.5/chromedriver-v3.0.0-beta.5-linux-armv7l.zip```
-10. ```unzip chromedriver-v3.0.0-beta.5-linux-armv7l.zip```
-11. ```chmod 755 chromedriver```
-12. ```chmod +x chromedriver```
-13. ```rm chromedriver-v3.0.0-beta.5-linux-armv7l.zip```
-
 
 ## For Firefox
 
@@ -60,14 +43,13 @@ Pi2.1. ```wget https://launchpad.net/~ubuntu-mozilla-security/+archive/ubuntu/pp
 
 Pi2.2 ```sudo dpkg -i firefox_49.0+build4-0ubuntu0.14.04.1_armhf.deb```
 
-
 ## Finishing up the Firefox installation
 
 _Encountered some errors when trying to run the quickstart.py and ran the next 3 commands (all may not be necessary)_
 
-8. ```sudo pip install future```
+8. ```sudo pip3 install future```
 9. ```sudo apt-get install xvfb```
-10. ```sudo pip install pyvirtualdisplay```
+10. ```sudo pip3 install pyvirtualdisplay```
 11. ```sudo reboot (may not be required, but no harm)```
 
 _Assuming you've modified quickstart.py to your liking and added your Instagram login to instapy.py_
@@ -78,7 +60,6 @@ _I installed TMUX to help run this headless, so that I can disconnect from the s
 
 13. ```sudo apt-get install tmux (more info found here: https://github.com/tmux/tmux)```
 14. If using firefox, follow the example seen in `examples\firefoxExample.py` to set the default browser as Firefox
-
 
 ## How to update GeckoDriver on Raspbian
 
