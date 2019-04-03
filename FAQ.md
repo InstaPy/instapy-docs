@@ -155,17 +155,25 @@ sudo apt install firefox
 TODO
 
 #### 3.3 Now: Check whether your Firefox and Geckodriver are compatible:
+
 <img src="https://i.stack.imgur.com/vRK7K.png" alt="Firefox and Geckodriver versions"><details><summary>They're not compatible?:mag_right:</summary> Download a compatible Geckodriver from here: <a href="https://github.com/mozilla/geckodriver/releases">Geckodriver releases</a></details></details>
 
 ## Now, that we can be sure everything is installed correctly and that hasn't fixed your issue, let's get to troubleshooting:
 
 **PLEASE FIRST READ WHAT THE ERROR OUTPUT SAYS, THINK ABOUT WHAT IT COULD MEAN AND HOW YOU COULD FIX IT**
 
-<details><summary> OSError: [Errno 8] Exec format error </summary>
+<details><summary> OSError: [Errno 8] Exec format error:mag_right: </summary>
 
-Make sure your chromedriver is the correct bit-version for your system, you're probably on Raspberry if you encountered this issue.</details>
+Make sure your chromedriver is the correct bit-version for your system, you're probably on Raspberry if you encountered this issue.
+To install the chromedriver that fits the Raspberry's ARM-structure, run
 
-<details><summary> No module named "xy" </summary>
+```bash
+pip3 install --user instapy-chromedriver==2.36.post0
+```
+
+</details>
+
+<details><summary> No module named "xy":mag_right: </summary>
 
 Make sure the python instance you used to execute your InstaPy script has all dependencies and the `instapy` package installed.</details>
 

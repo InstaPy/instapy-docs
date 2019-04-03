@@ -9,29 +9,27 @@ NOTE: _If you add an empty file named ssh to the boot directory, ssh will be ena
 4. plug in rpi3 with sd card installed with Raspbian Stretch with desktop
 5. select country & configure Raspbian
 6. open terminal --> ```sudo raspi-config``` -->interfacing options --> SSH -->enable (allows ssh connection from MacBook); then navigate to VNC --> enable (allows GUI access)
-7. ```sudo apt-get update && sudo apt-get upgrade```
+7. ```sudo apt-get update -y && sudo apt-get upgrade -y```
 
 ## Install InstaPy
-1. ```sudo apt-get update && sudo apt-get -y upgrade```
-2. ```sudo apt-get install chromium-browser```
-3. ```sudo apt-get install python3-pip```
-4. ```sudo pip3 install instapy```
-5. ```sudo pip3 uninstall instapy-chromedriver```
-6. ```sudo pip3 install instapy-chromedriver==2.36.post0```
-7. ```sudo reboot``` (optional)
-8. ```mkdir InstaPy Scripts```
-_(Do not confuse with "InstapPy" dir, that will be created automatically after first use which contais "db", "logs" and "assets" sub-directories)_
-9. ```cd InstaPy Scripts```
-10. ```nano quickstart.py```
-11. Edit quickstart file with your credentials/ add functions you want to use, documentation in the main [Readme](https://github.com/timgrossmann/InstaPy/blob/master/README.md)
-12. ```sudo python3 quickstart.py```
 
-## How to update on Raspberry Pi
-Keep your setup updated, but keeping ```instapy-chromedriver==2.36.post0```
+1. ```sudo apt-get install chromium-browser```
+2. ```sudo apt-get install python3-pip``` (only required if you're using Raspbian Lite)
+3. ```python3 -m pip install --user instapy```
+4. ```python3 -m pip uninstall instapy-chromedriver```
+5. ```python3 -m pip install --user instapy-chromedriver==2.36.post0```
+6. ```sudo reboot``` (optional)
+7. ```mkdir InstaPy```
+8. ```cd InstaPy```
+9. ```mkdir assets```
+10. ```cp /home/pi/.local/lib/python3.5/site-packages/instapy_chromedriver/chromedriver assets/```
+11. ```nano quickstart.py```
+12. Edit quickstart file with your credentials/ add functions you want to use, documentation in the [Readme](https://github.com/timgrossmann/InstaPy/blob/master/README.md)
+12. ```python3 quickstart.py```
 
-1. ```sudo pip3 install instapy -U```
-2. ```sudo pip3 uninstall instapy-chromedriver```
-3. ```sudo pip3 install instapy-chromedriver==2.36.post0```
+## Update InstaPy
+
+```pip3 install instapy -U```
 
 ## For Firefox
 
