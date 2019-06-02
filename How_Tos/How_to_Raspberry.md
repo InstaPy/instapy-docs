@@ -15,7 +15,7 @@ NOTE: _If you add an empty file named ssh to the boot directory, ssh will be ena
 
 1. ```sudo apt-get install chromium-browser```
 2. ```sudo apt-get install python3-pip``` (only required if you're using Raspbian Lite)
-3. ```python3 -m pip install --user instapy```
+3. ```python3 -m pip install -r requirements.txt``` [Requirements](https://gist.github.com/nafferro/812b21c6c9ef48edc75bf08d9691198b)
 4. ```python3 -m pip uninstall instapy-chromedriver```
 5. ```python3 -m pip install --user instapy-chromedriver==2.36.post0```
 6. ```sudo reboot``` (optional)
