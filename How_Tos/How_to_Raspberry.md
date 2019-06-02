@@ -15,17 +15,15 @@ NOTE: _If you add an empty file named ssh to the boot directory, ssh will be ena
 
 1. ```sudo apt-get install chromium-browser```
 2. ```sudo apt-get install python3-pip``` (only required if you're using Raspbian Lite)
-3. ```python3 -m pip install --user instapy```
-4. ```python3 -m pip uninstall instapy-chromedriver```
-5. ```python3 -m pip install --user instapy-chromedriver==2.36.post0```
-6. ```sudo reboot``` (optional)
-7. ```mkdir InstaPy```
-8. ```cd InstaPy```
-9. ```mkdir assets```
-10. ```cp /home/pi/.local/lib/python3.5/site-packages/instapy_chromedriver/chromedriver assets/```
-11. ```nano quickstart.py```
-12. Edit quickstart file with your credentials/ add functions you want to use, documentation in the [Readme](https://github.com/timgrossmann/InstaPy/blob/master/README.md)
-12. ```python3 quickstart.py```
+3. ```python3 -m pip install -r requirements.txt``` [requirements.txt](https://gist.github.com/nafferro/812b21c6c9ef48edc75bf08d9691198b)
+4. ```sudo reboot``` (optional)
+5. ```mkdir InstaPy```
+6. ```cd InstaPy```
+7. ```mkdir assets```
+8. ```cp /home/pi/.local/lib/python3.5/site-packages/instapy_chromedriver/chromedriver assets/```
+9. ```nano quickstart.py```
+10. Edit quickstart file with your credentials/ add functions you want to use, documentation in the [Readme](https://github.com/timgrossmann/InstaPy/blob/master/README.md)
+11. ```python3 quickstart.py```
 
 ## Update InstaPy
 
