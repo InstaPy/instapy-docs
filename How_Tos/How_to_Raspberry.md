@@ -1,4 +1,4 @@
-# Tutorial for Raspberry Pi3B+: Install InstaPy with Python 3.x
+# Tutorial for Raspberry Pi3B+ / Pi4B: Install InstaPy with Python 3.x
 
 ## Basic Raspbian Configuration
 NOTE: _If you add an empty file named ssh to the boot directory, ssh will be enabled when you first start your RPi (more info on the official website - section 3 - [here](https://www.raspberrypi.org/documentation/remote-access/ssh/)). If you do this, you can connect your RPi via ethernet, ssh in (once you have your ip) and skip right to the update step below (step 7). If you do not want to do this, follow the initial setup instructions to connect peripherals below._
@@ -14,7 +14,7 @@ NOTE: _If you add an empty file named ssh to the boot directory, ssh will be ena
 ## Install Firefox
 ```sudo apt-get install firefox-esr```
 
-## Install GeckoDriver 
+## Install GeckoDriver
 The latest versions of InstaPy automatically install geckodriver. If running an older InstaPy version (pre-0.6.0), read on:
 
 _GeckoDriver releases can be found in:_ https://github.com/mozilla/geckodriver/releases. The latest ARM release as of 2019-08-16 is v0.23.
@@ -22,7 +22,7 @@ _GeckoDriver releases can be found in:_ https://github.com/mozilla/geckodriver/r
 1. ```wget https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-arm7hf.tar.gz```
 2. ```tar -xvzf geckodriver-v*```
 3. ```chmod +x geckodriver```
-4. ```sudo cp geckodriver /usr/local/bin/``` 
+4. ```sudo cp geckodriver /usr/local/bin/```
 5. Ensure that /usr/local/bin is in your shell PATH.
 
 ## Install InstaPy
@@ -53,4 +53,3 @@ _Assuming you've modified quickstart.py to your liking and added your Instagram 
 _I installed TMUX to help run this headless, so that I can disconnect from the session and have the program continue to run on the rpi3_
 
 6. ```sudo apt-get install tmux (more info found here: https://github.com/tmux/tmux)```
-
