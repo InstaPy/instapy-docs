@@ -12,12 +12,23 @@ NOTE: _If you add an empty file named ssh to the boot directory, ssh will be ena
 7. ```sudo apt-get update -y && sudo apt-get upgrade -y```
 
 ## Install Firefox
+
 ```sudo apt-get install firefox-esr```
+
+Check the version of your installed Firefox. You'll need it later to select the matching version of `geckodriver`:
+
+```firefox -v```
 
 ## Install GeckoDriver 
 The latest versions of InstaPy automatically install geckodriver. If running an older InstaPy version (pre-0.6.0), read on:
 
 _GeckoDriver releases can be found in:_ https://github.com/mozilla/geckodriver/releases. The latest ARM release as of 2019-08-16 is v0.23.
+
+However, you have to check which version of `geckodriver` is compatible with your Firefox version from above: https://firefox-source-docs.mozilla.org/testing/geckodriver/Support.html 
+For example, for Firefox 52, you'll need `geckodriver` version 0.17.0 and 0.23.0 will not work!
+If you use the wrong version of `geckodriver`, you'll get an [error message](https://stackoverflow.com/a/52535654/2745116).
+
+In the following, we're assuming verison 0.23.0. Simply replace with whatever version you need.
 
 1. ```wget https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-arm7hf.tar.gz```
 2. ```tar -xvzf geckodriver-v*```
