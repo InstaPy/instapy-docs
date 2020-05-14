@@ -15,9 +15,11 @@ NOTE: _If you add an empty file named ssh to the boot directory, ssh will be ena
 ```sudo apt-get install firefox-esr```
 
 ## Install GeckoDriver 
-The latest versions of InstaPy automatically install geckodriver. If running an older InstaPy version (pre-0.6.0), read on:
+The latest versions of InstaPy automatically install geckodriver. For RaspberryPi you need ARM support in your geckodriver, which is why you'll need to download a specific version (0.23.0) of the driver here:
 
 _GeckoDriver releases can be found in:_ https://github.com/mozilla/geckodriver/releases. The latest ARM release as of 2019-08-16 is v0.23.
+
+Follow these steps:
 
 1. ```wget https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-arm7hf.tar.gz```
 2. ```tar -xvzf geckodriver-v*```
