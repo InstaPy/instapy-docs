@@ -23,3 +23,6 @@
 
 #### Additional docs
 - **[Instagram Business Categories](./BUSINESS_CATEGORIES.md)** - If you're filtering for business categories with InstaPy
+
+**InstaPy is being sponsored by the following partner. Please help to support us by taking a look and signing up to a free trial 😊**
+<a href="https://tracking.gitads.io/?repo=InstaPy"> <img src="https://images.gitads.io/InstaPy" alt="GitAds"/> </a>
