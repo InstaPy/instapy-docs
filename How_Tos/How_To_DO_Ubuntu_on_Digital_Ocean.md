@@ -30,6 +30,12 @@ $ sudo apt-get install -y -f
 $ sudo rm google-chrome-stable_current_amd64.deb
 ```
 
+### Firefox-stable
+
+```sh
+$ sudo apt-get install firefox
+```
+
 ### InstaPy
 
 ```bash
