@@ -50,7 +50,7 @@ _Encountered some errors when trying to run the quickstart.py and ran the next 3
 
 _Assuming you've modified quickstart.py to your liking and added your Instagram login to quickstart.py_
 
-5. ```sudo xvfb-run python3 quickstart.py```
+5. ```xvfb-run python3 quickstart.py```
 
 _I installed TMUX to help run this headless, so that I can disconnect from the session and have the program continue to run on the rpi3_
 
