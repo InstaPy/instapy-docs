@@ -46,13 +46,12 @@ _Encountered some errors when trying to run the quickstart.py and ran the next 3
 1. ```sudo pip3 install future```
 2. ```sudo apt-get install xvfb```
 3. ```sudo pip3 install pyvirtualdisplay```
-4. ```sudo reboot (may not be required, but no harm)```
+4. ```sudo reboot``` (may not be required, but no harm)
 
 _Assuming you've modified quickstart.py to your liking and added your Instagram login to quickstart.py_
 
-5. ```sudo xvfb-run python quickstart.py```
+5. ```sudo xvfb-run python3 quickstart.py```
 
 _I installed TMUX to help run this headless, so that I can disconnect from the session and have the program continue to run on the rpi3_
 
-6. ```sudo apt-get install tmux (more info found here: https://github.com/tmux/tmux)```
-
+6. ```sudo apt-get install tmux``` (more info found here: https://github.com/tmux/tmux)
