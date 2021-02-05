@@ -13,6 +13,8 @@ NOTE: _If you add an empty file named ssh to the boot directory, ssh will be ena
 
 ## Install Firefox
 ```sudo apt-get install firefox-esr```
+or install Firefox with GeckoDriver (working Raspberry Pi 4, Ubuntu 20.04LTS)
+```sudo apt install firefox-geckodriver```
 
 ## Install GeckoDriver 
 The latest versions of InstaPy automatically install geckodriver. For RaspberryPi you need ARM support in your geckodriver, which is why you'll need to download a specific version (0.23.0) of the driver here:
